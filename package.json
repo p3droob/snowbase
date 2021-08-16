@@ -1,0 +1,29 @@
+{
+  "name": "snowbase",
+  "version": "3.3.0",
+  "description": "Um package brasileiro de armazenamento de dados",
+  "main": "index.js",
+  "dependencies": {
+    "fs": "0.0.1-security"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FrozenFireBR/snowbase.git"
+  },
+  "keywords": [
+    "json",
+    "JSON",
+    "database",
+    "local"
+  ],
+  "author": "Mr. Frozen Fire",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FrozenFireBR/snowbase/issues"
+  },
+  "homepage": "https://github.com/FrozenFireBR/snowbase#readme"
+}

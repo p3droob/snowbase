@@ -1,33 +1,39 @@
 # **SNOWBASE**
 Suporte: [Discord.gg/AxcQf5Pf58](https://discord.com/invite/AxcQf5Pf58)
 
-##### Um package brasileiro, usando json
+Página oficial: [snowbase.js.com](https://frozenfirebr.gitbook.io/snowbase/)
+##### Um package brasileiro, usando json e [fs](https://www.npmjs.com/package/fs), antes de iniciar escolha o arquivo que irá armazenar os dados (.json).
 ## Instalação
 ```js
 npm i snowbase
 ```
 ## *Formas de uso:*
-> PEGAR UM VALOR
+> PEGAR
 
 ```js
-const snowdb = require('snowbase');
-snowdb.get(`some_bag`)// 10
+const snow = require('snowbase');
+const db = new snow.database('./snowbase.json')
+db.get(`user/bag`)// 10
 ```
-> PEGAR TODOS OS VALORES
+> SALVAR
 
 ```js
-const snowdb = require('snowbase');
-snowdb.getAll()// [ { database: 'some_bag', value: 10 } ]
+const snow = require('snowbase');
+const db = new snow.database('./snowbase.json')
+db.save('user/bag', 150)// 150
 ```
-> SALVAR UM VALOR
+> DELETAR
 
 ```js
-const snowdb = require('snowbase')
-snowdb.save('some_bag', 150)// 150
+const snow = require('snowbase');
+const db = new snow.database('./snowbase.json')
+db.remove(`some_bag`)// null
 ```
-> DELETAR UM VALOR
+
+> COMO DIVIDIR ELEMENTOS EM PASTAS
 
 ```js
-const snowdb = require('snowbase');
-snowdb.remove(`some_bag`)// null
+const snow = require('snowbase');
+const db = new snow.database('./snowbase.json')
+db.get('testes/teste1')// null
 ```
